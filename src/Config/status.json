@@ -1,0 +1,15 @@
+{
+    "insertSuccess":true,
+    "insertFailure":false,
+    "updateSuccess":true,
+    "updateFailure":false,
+    "deleteSuccess":true,
+    "deleteFailure":false,
+    "loginSuccess":true,
+    "loginFailure":false,
+    "existed":true,
+    "nonExisted":false,
+    "true":true,
+    "false":false,
+    "error":"error"
+}
