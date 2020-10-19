@@ -14,7 +14,7 @@ router.get("/launchData/",(req,res)=>{
           ).catch(err => {console.log(err)})
       },
       (data,callback) => {
-        res.json({lauchDataList : data})
+        res.json({launchDataList : data})
         callback(null,"return launch data list successfully")
       },
   ],(err,res)=>{

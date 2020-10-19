@@ -31,9 +31,9 @@ var clearRocketLaunch = async (year) => {
 }
 
 var getRocketLaunchList = async () => {
-    return await commonDao.findAll(collectionName).then(
+    return await commonDao.findAllByAscend(collectionName,{},{id:1}).then(
         res=>{
-            console.log(new Date() + " find current rocket launch list");
+            console.log(new Date() + " find current rocket launch ascend list");
             return res;
         }
     ).catch(err=>{console.log(err)});

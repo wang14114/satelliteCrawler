@@ -14,6 +14,6 @@ app.use('/server',require('./src/APIs/mainAPI.js'))
         if (err) {
             console.error('err:', err)
         } else {
-            console.info(`===> api server is running at localhost:8080`)
+            console.info(`===> api server is running at localhost:`+port)
         }
 })

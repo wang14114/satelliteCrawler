@@ -159,7 +159,7 @@ const start = async (year) => {
 }
 
 const clearAll = async () =>{
-    return await rocketLaunchDao.clearRocketLaunch(true)
+    return await rocketLaunchDao.clearRocketLaunch()
 } 
 
 module.exports = { start, clearAll }

@@ -64,6 +64,20 @@ var findAll = (async (subCollection,param={})=>{
     }
 })
 
+var findAllByAscend = (async (subCollection,param={},sortParam={})=>{
+    if(subCollection === undefined) throw "no collection input in function findAll"
+    if(Object.prototype.toString.call(param) !== "[object Object]") throw "error : input param type must be Object in function findAll"
+    let currentCollection = collectionName + "." + subCollection;
+    const client = await MongoClient.connect(url,{useNewUrlParser: true,useUnifiedTopology: true});
+    const dbo = client.db(dbName);
+    try{
+        return await dbo.collection(currentCollection).find(param).sort(sortParam).toArray();
+    }
+    finally{
+        client.close();
+    }
+})
+
 var updateOne = (async (subCollection,query,newValues)=>{
     if(subCollection === undefined) throw "error : no collection input in function updateOne"
     if(Object.prototype.toString.call(query) !== "[object Object]") throw "error : query type must be Object in function UpdateOne"
@@ -127,4 +141,4 @@ var deleteMany = (async (subCollection,query)=>{
 
 
 
-module.exports = {insertOne,insertMany,findCount,findAll,updateOne,updateMany,deleteOne,deleteMany};
+module.exports = {insertOne,insertMany,findCount,findAll,updateOne,updateMany,deleteOne,deleteMany,findAllByAscend};
