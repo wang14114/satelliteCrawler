@@ -1,7 +1,7 @@
 {
 	"apiHost":"129.5.1.2",
     "apiPort":"8088",
-    "dbHost":"54.215.89.58",
+    "dbHost":"127.0.0.1",
     "dbPort":"27017",
     "db": "test",
     "collection" :"satellite"
