@@ -1,4 +1,4 @@
-var config = require('../config/config.json');
+var config = require('../Config/config.json');
 var async = require("async");
 
 const dbName = config.db;

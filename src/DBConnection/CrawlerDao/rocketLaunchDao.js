@@ -1,5 +1,5 @@
 var commonDao = require("../commonDao")
-var status = require("../../config/status.json")
+var status = require("../../Config/status.json")
 
 const collectionName = "rocketLaunch"
 
